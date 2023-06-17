@@ -6,6 +6,7 @@ const mongoose = require("mongoose")
   userId integer ---> quien le dio like
  */
 const likeSchema = new mongoose.Schema({
+  // Esto podria ser una relacion por referencia para no repetir tanto dato
   tweet: {
     _id: String,
     body: {
