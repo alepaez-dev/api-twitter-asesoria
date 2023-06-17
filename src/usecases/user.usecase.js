@@ -7,6 +7,7 @@ const User = require("../models/user.model");
 
 const create = (data) => {
   const user = User.create(data);
+  return user;
 }
 
 module.exports = { create };
