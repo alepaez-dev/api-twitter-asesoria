@@ -23,8 +23,9 @@ router.post("/", async (req, res) => {
 
 // List tweets
 router.get("/", async (req, res) => {
+  const userId = req.query?.userId
   try{
-    const tweets = await list();
+    const tweets = await list(userId);
     res.json({
       success: true,
       data: tweets

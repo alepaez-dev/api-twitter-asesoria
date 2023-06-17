@@ -6,8 +6,8 @@ const create = (data) => {
   return tweet
 }
 
-const list = () => {
-  const tweets = Tweet.find();
+const list = (id) => {
+  const tweets = Tweet.find({ "user._id": id });
   return tweets;
 }
 
