@@ -8,6 +8,8 @@
  */
 const express = require("express");
 
+const userRouter = require("./routes/user.route");
+
 // 1 - Crear la app
 const app = express();
 
@@ -15,6 +17,6 @@ const app = express();
 app.use(express.json()) // Middlewares de parseo json.
 
 // 3 - Middlewares de ruteo  -> WIP
-
+app.use("/users", userRouter);
 
 module.exports = app;
