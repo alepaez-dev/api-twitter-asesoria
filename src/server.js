@@ -10,6 +10,8 @@ const express = require("express");
 
 const userRouter = require("./routes/user.route");
 const tweetRouter = require("./routes/tweet.route");
+const likeRouter = require("./routes/like.route");
+
 // 1 - Crear la app
 const app = express();
 
@@ -19,5 +21,6 @@ app.use(express.json()) // Middlewares de parseo json.
 // 3 - Middlewares de ruteo  -> WIP
 app.use("/users", userRouter);
 app.use("/tweets", tweetRouter);
+app.use("/likes", likeRouter);
 
 module.exports = app;
